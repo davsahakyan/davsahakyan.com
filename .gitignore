@@ -40,6 +40,7 @@ yarn-error.log
 *.ntvs*
 *.njsproj
 *.sln
+.vscode
 
 # DB config data
 /backend/config/options.js
