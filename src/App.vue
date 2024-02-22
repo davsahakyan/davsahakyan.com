@@ -1,19 +1,22 @@
 <script setup>
+import LeftSidebar from './components/LeftSidebar.vue';
+
 </script>
 
 <template>
-  <div id="container">
-    <div>The beginning of a new dawn</div>
-  </div>
+  <header id="container">
+    <div id="sidebar">
+      <LeftSidebar />
+    </div>
+  </header>
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
-}
+  #sidebar {
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
 </style>
