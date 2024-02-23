@@ -1,5 +1,6 @@
 <script setup>
 import LeftSidebar from './components/LeftSidebar.vue';
+import RightContent from './components/RightContent.vue';
 
 </script>
 
@@ -8,6 +9,7 @@ import LeftSidebar from './components/LeftSidebar.vue';
     <div id="sidebar">
       <LeftSidebar />
     </div>
+    <RightContent />
   </header>
 </template>
 

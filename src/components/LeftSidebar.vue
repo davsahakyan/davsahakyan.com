@@ -47,9 +47,10 @@ const listRefs = ref([]);
 
 <style scoped>
 #heading #name {
-  font-size: 52px;
+  font-size: 48px;
   font-weight: 600;
-  line-height: 0.8;
+  line-height: 0.7;
+  margin-top: .3em;
 }
 
 #heading #position {
@@ -73,6 +74,8 @@ ul#menu_list li {
   transform-origin: left bottom;
   height: 60px;
   line-height: 60px;
+  user-select: none;
+  -webkit-user-drag: none;
 }
 
 ul#menu_list li.active {

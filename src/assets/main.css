@@ -17,9 +17,10 @@ body {
 #container {
   max-width: 1080px;
   margin: 0 auto;
-  background-color: rgba(255, 255, 255, 0.05);
   min-height: 100vh;
   padding-top: 6vh;
   padding-bottom: 6vh;
   position: sticky;
+  display: flex;
+  justify-content: space-between;
 }
