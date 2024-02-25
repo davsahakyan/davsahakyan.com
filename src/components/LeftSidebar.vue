@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue';
+import { onMounted, ref } from 'vue';
 
 
 const list = ref([
@@ -19,6 +19,9 @@ const list = ref([
 
 const listRefs = ref([]);
 
+onMounted(() => {
+})
+
 </script>
 
 <template>
@@ -30,8 +33,11 @@ const listRefs = ref([]);
 
     <nav id="menu">
       <ul id="menu_list">
-        <li v-for="litem in list" :key="litem.section" :class="litem.section" ref="listRefs">
-          {{ litem.text }}
+        <li v-for="litem in list" :key="litem.section"
+          :class="litem.section + ' ' + (litem.section == 'about' ? 'active' : '')" ref="listRefs">
+          <a :href="'#' + litem.section">
+            {{ litem.text }}
+          </a>
         </li>
       </ul>
     </nav>
@@ -68,9 +74,8 @@ ul#menu_list {
 }
 
 ul#menu_list li {
-  font-size: 28px;
+  font-size: 24px;
   color: var(--d-white-o-40);
-  transition: .5s ease;
   transform-origin: left bottom;
   height: 60px;
   line-height: 60px;
@@ -78,8 +83,19 @@ ul#menu_list li {
   -webkit-user-drag: none;
 }
 
-ul#menu_list li.active {
-  font-size: 40px;
+ul#menu_list li a {
+  color: inherit;
+  text-decoration: none;
+  transition: .3s ease;
+}
+
+ul#menu_list li a:hover {
+  color: var(--d-white-o-80);
+}
+
+ul#menu_list li.active a {
+  font-size: 36px;
   color: var(--d-white);
+  transition: .4  s ease;
 }
 </style>

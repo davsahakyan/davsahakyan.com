@@ -1,5 +1,9 @@
 @import './base.css';
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   display: flex;
   justify-content: center;
@@ -18,9 +22,7 @@ body {
   max-width: 1080px;
   margin: 0 auto;
   min-height: 100vh;
-  padding-top: 6vh;
-  padding-bottom: 6vh;
-  position: sticky;
+  
   display: flex;
   justify-content: space-between;
 }
