@@ -7,30 +7,36 @@ function getTopDistance(element) {
     return Math.abs(rect.top);
 }
 
-function updateActiveSection()  {
+let lastActiveSection = null;
+
+function updateActiveSection() {
     const sections = document.querySelectorAll('section#content section');
-    const navLinks = document.querySelectorAll('nav#menu ul li');
 
     let minTopDistance = window.innerHeight;
-    let activeSection = null;
+    let activeSectionId = null;
 
-    
+
     sections.forEach((section) => {
         const topDistance = getTopDistance(section);
 
         if (topDistance < minTopDistance) {
             minTopDistance = topDistance;
-            activeSection = section.getAttribute('id');
+            activeSectionId = section.getAttribute('id');
         }
     })
 
-    navLinks.forEach(navLink => {
-        if (navLink.classList.contains(activeSection)) {
-            navLink.classList.add('active');
-        } else {
-            navLink.classList.remove('active');
-        }
-    })
+    if (lastActiveSection != activeSectionId) {
+        lastActiveSection = activeSectionId;
+
+        let updateActiveNavEvent = new CustomEvent('updateActiveNavEvent', {
+            'detail': {
+                activeSectionId: activeSectionId,
+            }
+        })
+
+        window.dispatchEvent(updateActiveNavEvent);
+    }
+
 }
 
 onMounted(() => {
@@ -54,9 +60,7 @@ onMounted(() => {
     scroll-padding-top: 6rem;
 }
 
-#experience {
-    height: 100vh;
-}
+#experience {height: 20px;}
 
 #projects {
     height: 100vh;

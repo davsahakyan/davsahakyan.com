@@ -1,27 +1,37 @@
 <script setup>
 import { onMounted, ref } from 'vue';
 
-
 const list = ref([
   {
     "section": "about",
-    "text": "About"
+    "text": "About",
+    active: true
   },
   {
     "section": "experience",
-    "text": "Experience"
+    "text": "Experience",
+    active: false
   },
   {
     "section": "projects",
-    "text": "Projects"
+    "text": "Projects",
+    active: false
   }
 ]);
 
 const listRefs = ref([]);
 
-onMounted(() => {
-})
+function showSection(sectionId) {
+  document.querySelector(`#${sectionId}`)?.scrollIntoView({ behavior: 'smooth' });
+}
 
+onMounted(() => {
+  window.addEventListener('updateActiveNavEvent', (e) => {
+    list.value.forEach((li) => {
+      li.active = (e.detail.activeSectionId == li.section);
+    })
+  })
+})
 </script>
 
 <template>
@@ -33,9 +43,9 @@ onMounted(() => {
 
     <nav id="menu">
       <ul id="menu_list">
-        <li v-for="litem in list" :key="litem.section"
-          :class="litem.section + ' ' + (litem.section == 'about' ? 'active' : '')" ref="listRefs">
-          <a :href="'#' + litem.section">
+        <li v-for="litem in list" :key="litem.section" :class="[litem.section, (litem.active) ? 'active' : '']"
+          @click="showSection(litem.section)" ref="listRefs">
+          <a>
             {{ litem.text }}
           </a>
         </li>
@@ -85,6 +95,7 @@ ul#menu_list li {
 
 ul#menu_list li a {
   color: inherit;
+  cursor: pointer;
   text-decoration: none;
   transition: .3s ease;
 }
@@ -96,6 +107,6 @@ ul#menu_list li a:hover {
 ul#menu_list li.active a {
   font-size: 36px;
   color: var(--d-white);
-  transition: .4  s ease;
+  transition: .4 s ease;
 }
 </style>

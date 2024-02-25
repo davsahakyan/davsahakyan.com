@@ -4,8 +4,7 @@
 <template>
     <section id="about" aria-label="About Section">
         <p>
-            Back in 2017, I got into recreating websites I found online on my computer, and to this day, I am still pursuing
-            the dream of coding anything and everything possible on my computer.
+            Back in 2017, I got into recreating websites I found online on my computer, and to this day, I am still working towards coding anything and everything possible.
         </p>
         <p>
             Up to this day, I have had a chance to build websites for an <span class="bold">NGO</span>, develop middleware for an
@@ -21,6 +20,10 @@
 </template>
 
 <style scoped>
+section#about {
+  scroll-margin-top: 6vh;
+}
+
 section#about p {
     font-weight: 300;
     font-size: 20px;
