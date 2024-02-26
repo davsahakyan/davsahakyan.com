@@ -6,7 +6,7 @@
   --d-white-o-20: rgba(255, 255, 255, 0.2);
   --d-white-o-10: rgba(255, 255, 255, 0.1);
 
-  --d-background-blue: rgba(9, 26, 66, 1);
+  --d-background-blue: rgb(7, 21, 54);
   --d-background-black: rgba(24, 24, 24, 1);
 
   --d-aqua: rgba(94, 234, 212, 1);
@@ -16,7 +16,7 @@
 
 /* semantic color variables for this project */
 :root {
-  --background-color: var(--d-background-black);
+  --background-color: var(--d-background-blue);
 
   --skill-background: var(--d-aqua-opaque);
   --skill-text: var(--d-aqua);

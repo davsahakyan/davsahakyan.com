@@ -69,7 +69,8 @@ defineProps({
     font-weight: 200;
     line-height: 30px;
     font-size: 20px;
-    padding-bottom: .8em ;
+    padding-bottom: .8em;
+    color: var(--d-white-o-80);
 }
 
 .experience-wrapper .content .skills {
