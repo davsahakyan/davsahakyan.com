@@ -1,6 +1,7 @@
 <script setup>
 import { onMounted } from 'vue';
 import AboutSection from './AboutSection.vue';
+import ExperienceSection from './ExperienceSection.vue';
 
 function getTopDistance(element) {
     const rect = element.getBoundingClientRect();
@@ -48,7 +49,7 @@ onMounted(() => {
 <template>
     <section id="content">
         <AboutSection />
-        <section id="experience"></section>
+        <ExperienceSection />
         <section id="projects"></section>
     </section>
 </template>

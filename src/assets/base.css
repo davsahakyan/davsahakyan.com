@@ -3,12 +3,14 @@
   --d-white-o-80: rgba(255, 255, 255, 0.8);
   --d-white-o-60: rgba(255, 255, 255, 0.6);
   --d-white-o-40: rgba(255, 255, 255, 0.4);
+  --d-white-o-20: rgba(255, 255, 255, 0.2);
+  --d-white-o-10: rgba(255, 255, 255, 0.1);
 
   --d-background-blue: rgba(9, 26, 66, 1);
   --d-background-black: rgba(24, 24, 24, 1);
 
   --d-aqua: rgba(94, 234, 212, 1);
-  --d-aqua-opaque: rgba(45, 212, 191. 0.2);
+  --d-aqua-opaque: rgba(45, 212, 191, 0.2);
 
 }
 
