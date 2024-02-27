@@ -42,7 +42,7 @@ defineProps({
 }
 
 .experience-wrapper:hover {
-    background-color: var(--d-white-o-10);
+    background-color: rgba(255, 255, 255, 0.05);
 }
 
 .experience-wrapper .date {

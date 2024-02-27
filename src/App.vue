@@ -2,6 +2,12 @@
 import LeftSidebar from './components/LeftSidebar.vue';
 import RightContent from './components/RightContent.vue';
 
+const flareContainer = document.querySelector('#flare');
+
+document.body.addEventListener('mousemove', (e) => {
+  flareContainer.style.background = `radial-gradient(800px at ${e.clientX}px ${e.clientY}px, var(--flare-color), transparent 70%)`;
+})
+
 </script>
 
 <template>

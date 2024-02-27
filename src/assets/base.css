@@ -8,6 +8,7 @@
 
   --d-background-blue: rgb(7, 21, 54);
   --d-background-black: rgba(24, 24, 24, 1);
+  --d-flare-blue: rgba(12, 31, 73, 0.5);
 
   --d-aqua: rgba(94, 234, 212, 1);
   --d-aqua-opaque: rgba(45, 212, 191, 0.2);
@@ -17,6 +18,7 @@
 /* semantic color variables for this project */
 :root {
   --background-color: var(--d-background-blue);
+  --flare-color: var(--d-flare-blue);
 
   --skill-background: var(--d-aqua-opaque);
   --skill-text: var(--d-aqua);

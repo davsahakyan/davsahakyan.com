@@ -8,6 +8,15 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background: var(--background-color);
+}
+
+#flare {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 #app {
@@ -16,13 +25,13 @@ body {
   margin: 0 auto;
   padding: 0 1rem ;
   min-height: 100vh;
+  z-index: 30;
 }
 
 #container {
   max-width: 1080px;
   margin: 0 auto;
   min-height: 100vh;
-  
   display: flex;
   justify-content: space-between;
 }

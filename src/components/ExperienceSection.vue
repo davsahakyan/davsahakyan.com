@@ -52,4 +52,13 @@ import ExperienceSingle from './ExperienceSingle.vue';
         margin-top: 1em;
         scroll-margin-top: 6vh;
     }
+
+    section#experience:hover .experience-wrapper {
+        opacity: 0.5;
+        transition: .5s ease;
+    }
+
+    section#experience:hover .experience-wrapper:hover {
+        opacity: 1;
+    }
 </style>

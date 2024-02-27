@@ -60,10 +60,4 @@ onMounted(() => {
     padding: 6vh 0;
     scroll-padding-top: 6rem;
 }
-
-#experience {height: 20px;}
-
-#projects {
-    height: 100vh;
-}
 </style>
