@@ -17,6 +17,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
+  background: radial-gradient(800px at 50% 50%, var(--flare-color), transparent 70%);
 }
 
 #app {

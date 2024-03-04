@@ -55,7 +55,6 @@ import ExperienceSingle from './ExperienceSingle.vue';
 
     section#experience:hover .experience-wrapper {
         opacity: 0.5;
-        transition: .5s ease;
     }
 
     section#experience:hover .experience-wrapper:hover {
