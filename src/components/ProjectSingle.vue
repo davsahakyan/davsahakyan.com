@@ -94,18 +94,14 @@ defineProps({
     font-size: 16px;
     width: max-content;
     background-color: transparent;
-    backface-visibility: hidden;
-    -webkit-font-smoothing: subpixel-antialiased;
     cursor: pointer;
     box-shadow: 0px 0px 0 2px rgba(var(--action-button-color), .7);
-    transition: box-shadow .4s ease .2s, background-color .6s ease, transform .2s ease;
-    transform: translateZ(0) scale(1);
+    transition: box-shadow .4s ease .2s, background-color .6s ease;
 }
 
 .action-button:hover {
     background-color: rgba(var(--action-button-color), 1);
     box-shadow: 0px 0px 0 1px rgba(var(--action-button-color), .7);
-    transition: box-shadow .3s ease, background-color .7s ease, transform .2s ease ;
-    transform: translateZ(0) scale(1.04);
+    transition: box-shadow .3s ease, background-color .7s ease ;
 }
 </style>

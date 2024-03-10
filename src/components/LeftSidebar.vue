@@ -1,6 +1,11 @@
 <script setup>
 import { onMounted, ref } from 'vue';
 
+import GithubIcon from '../assets/Github.svg';
+import LinkedInIcon from '../assets/LinkedIn.svg';
+import FiverrIcon from '../assets/Fiverr.svg';
+import UpworkIcon from '../assets/Upwork.svg';
+
 const list = ref([
   {
     "section": "about",
@@ -18,6 +23,29 @@ const list = ref([
     active: false
   }
 ]);
+
+const socials = ref([
+  {
+    "image": GithubIcon,
+    "alt": "Github",
+    "url": "https://github.com/davsahakyan"
+  },
+  {
+    "image": LinkedInIcon,
+    "alt": "LinkedIn",
+    "url": "https://www.linkedin.com/in/dav-sahakyan/"
+  },
+  {
+    "image": FiverrIcon,
+    "alt": "Fiverr",
+    "url": "https://www.fiverr.com/davsahakyann",
+  },
+  {
+    "image": UpworkIcon,
+    "alt": "Upwork",
+    "url": "https://www.upwork.com/freelancers/~01df82f3d99133d553",
+  }
+])
 
 const listRefs = ref([]);
 
@@ -51,13 +79,14 @@ onMounted(() => {
         </li>
       </ul>
     </nav>
-
   </div>
+
   <div id="socials">
-    <div class="social"></div>
-    <div class="social"></div>
-    <div class="social"></div>
-    <div class="social"></div>
+    <div class="social" v-for="(social, index) in socials" :key="index">
+      <a :href="social.url" target="_blank">
+        <img :src="social.image" :alt="social.alt">
+      </a>
+    </div>
   </div>
 </template>
 
@@ -108,5 +137,38 @@ ul#menu_list li.active a {
   font-size: 36px;
   color: var(--d-white);
   transition: .4 s ease;
+}
+
+#socials {
+  margin-top: 10vh;
+  width: max-content;
+
+}
+
+#socials:hover .social {
+  opacity: .4;
+}
+
+#socials .social {
+  height: 28px;
+  display: inline-block;
+  margin-right: .6em;
+  opacity: .9;
+  transition: .2s linear;
+}
+
+#socials .social:hover,
+#socials .social::selection {
+  opacity: 1;
+}
+
+.social a {
+  width: 100%;
+  height: 100%;
+}
+
+.social a img {
+  width: 100%;
+  height: 100%;
 }
 </style>
