@@ -43,12 +43,13 @@ defineProps({
     width: 100%;
     display: flex;
     height: 200px;
+    margin-bottom: 1.5em;
 }
 
 .project-wrapper .content {
     width: 60%;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     justify-content: space-between;
     background-color: var(--d-white-o-10);
     padding: 1em 0 1em 1em;
@@ -80,20 +81,31 @@ defineProps({
 }
 
 .project-wrapper .image img {
-    aspect-ratio: 16 / 9;
     height: 100%;
 }
 
 .action-button {
-    background-color: #090732;
     border: none;
     outline: none;
     color: #fff;
     font-weight: 900;
-    padding: .3em 1.8em;
+    padding: .3em 2em;
     border-radius: 2px;
     font-size: 16px;
     width: max-content;
-    background-color: var(--action-button-color);
+    background-color: transparent;
+    backface-visibility: hidden;
+    -webkit-font-smoothing: subpixel-antialiased;
+    cursor: pointer;
+    box-shadow: 0px 0px 0 2px rgba(var(--action-button-color), .7);
+    transition: box-shadow .4s ease .2s, background-color .6s ease, transform .2s ease;
+    transform: translateZ(0) scale(1);
+}
+
+.action-button:hover {
+    background-color: rgba(var(--action-button-color), 1);
+    box-shadow: 0px 0px 0 1px rgba(var(--action-button-color), .7);
+    transition: box-shadow .3s ease, background-color .7s ease, transform .2s ease ;
+    transform: translateZ(0) scale(1.04);
 }
 </style>
