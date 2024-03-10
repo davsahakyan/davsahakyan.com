@@ -1,7 +1,7 @@
 <script setup>
 import ProjectSingle from './ProjectSingle.vue';
-import g2l from '../assets/global-to-local.png';
-import edujustice from '../assets/edujusticeforum.png';
+import g2l from '../assets/global-to-local.jpg';
+import edujustice from '../assets/edujusticeforum.jpg';
 import ma_ma from '../assets/ma_ma.jpg';
 
 </script>
