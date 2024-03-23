@@ -2,7 +2,8 @@
 defineProps({
     imageUrl: String,
     imageAlt: String,
-    buttonColor: String
+    buttonColor: String,
+    websiteUrl: String
 })
 
 </script>
@@ -26,9 +27,11 @@ defineProps({
                 <slot name="description"></slot>
             </div>
             <button class="action-button" :style="'--action-button-color: ' + buttonColor">
-                <slot name="actionText">
-
-                </slot>
+                <a :href="websiteUrl" target="_blank">
+                    <slot name="actionText">
+                        
+                    </slot>
+                </a>
             </button>
 
         </div>
@@ -88,10 +91,7 @@ defineProps({
     border: none;
     outline: none;
     color: #fff;
-    font-weight: 900;
-    padding: .3em 2em;
     border-radius: 2px;
-    font-size: 16px;
     width: max-content;
     background-color: transparent;
     cursor: pointer;
@@ -102,6 +102,17 @@ defineProps({
 .action-button:hover {
     background-color: rgba(var(--action-button-color), 1);
     box-shadow: 0px 0px 0 1px rgba(var(--action-button-color), .7);
-    transition: box-shadow .3s ease, background-color .7s ease ;
+    transition: box-shadow .3s ease, background-color .7s ease;
+}
+
+.action-button a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    font-weight: 900;
+    color: #fff;
+    text-decoration: none;
+    padding: .3em 2em;
 }
 </style>

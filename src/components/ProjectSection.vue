@@ -8,7 +8,7 @@ import ma_ma from '../assets/ma_ma.jpg';
 
 <template>
     <section id="projects">
-        <ProjectSingle :image-url='g2l' image-alt='Global to Local Website' button-color="255, 46, 64">
+        <ProjectSingle :image-url='g2l' image-alt='Global to Local Website' button-color="255, 46, 64" website-url="https://global-to-local.se">
             <template v-slot:name>
                 Global to Local
             </template>
@@ -23,7 +23,7 @@ import ma_ma from '../assets/ma_ma.jpg';
             </template>
         </ProjectSingle>
 
-        <ProjectSingle :image-url='edujustice' image-alt='Edujusticeforum Website' button-color="7, 39, 155">
+        <ProjectSingle :image-url='edujustice' image-alt='Edujusticeforum Website' button-color="7, 39, 155" website-url="https://edujusticeforum.am">
             <template v-slot:name>
                 Edujusticeforum
             </template>
@@ -38,7 +38,7 @@ import ma_ma from '../assets/ma_ma.jpg';
             </template>
         </ProjectSingle>
 
-        <ProjectSingle :image-url='ma_ma' image-alt='Ma-Ma Banner Board' button-color="46, 134, 86">
+        <ProjectSingle :image-url='ma_ma' image-alt='Ma-Ma Banner Board' button-color="46, 134, 86" website-url="https://ma-ma.dk/">
             <template v-slot:name>
                 Ma-Ma Banners
             </template>
