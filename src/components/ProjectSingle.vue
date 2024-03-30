@@ -1,4 +1,6 @@
 <script setup>
+import ProjectPopUp from './ProjectPopUp.vue';
+
 defineProps({
     imageUrl: String,
     imageAlt: String,
@@ -26,13 +28,32 @@ defineProps({
             <div class="description">
                 <slot name="description"></slot>
             </div>
-            <button class="action-button" :style="'--action-button-color: ' + buttonColor">
+
+            <!-- <button class="action-button" :style="'--action-button-color: ' + buttonColor">
                 <a :href="websiteUrl" target="_blank">
                     <slot name="actionText">
                         
                     </slot>
-                </a>
-            </button>
+                </a> 
+            </button> -->
+            <ProjectPopUp :buttonColor="buttonColor" :image-url='imageUrl' :image-alt="imageAlt" :websiteUrl="websiteUrl">
+                <template v-slot:buttonText>
+                    Visit
+                </template>
+
+                <template v-slot:title>
+                    <slot name="name"></slot>
+                </template>
+
+                <template v-slot:date>
+                    <slot name="date"></slot>
+                </template>
+
+                <template v-slot:description>
+                    <slot name="description"></slot>
+                </template>
+
+            </ProjectPopUp>
 
         </div>
         <div class="image">
@@ -87,32 +108,4 @@ defineProps({
     height: 100%;
 }
 
-.action-button {
-    border: none;
-    outline: none;
-    color: #fff;
-    border-radius: 2px;
-    width: max-content;
-    background-color: transparent;
-    cursor: pointer;
-    box-shadow: 0px 0px 0 2px rgba(var(--action-button-color), .7);
-    transition: box-shadow .4s ease .2s, background-color .6s ease;
-}
-
-.action-button:hover {
-    background-color: rgba(var(--action-button-color), 1);
-    box-shadow: 0px 0px 0 1px rgba(var(--action-button-color), .7);
-    transition: box-shadow .3s ease, background-color .7s ease;
-}
-
-.action-button a {
-    display: block;
-    width: 100%;
-    height: 100%;
-    font-size: 16px;
-    font-weight: 900;
-    color: #fff;
-    text-decoration: none;
-    padding: .3em 2em;
-}
 </style>
