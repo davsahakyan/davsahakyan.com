@@ -31,4 +31,25 @@ document.body.addEventListener('mousemove', (e) => {
   position: sticky;
   top: 0;
 }
+
+
+@media screen and (max-width: 1200px) {
+
+  #container {
+    display: block; 
+  }
+
+  header {
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+  }
+
+  #sidebar {
+    width: 100%;
+    padding: 3em 0 1em 0;
+  }
+
+}
+
 </style>

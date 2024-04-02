@@ -88,6 +88,12 @@ defineProps({
     position: relative;
 }
 
+.project-wrapper .description {
+    font-size: 16px;
+    line-height: 1.2em;
+    padding-right: 2em;
+}
+
 .project-wrapper .image {
     width: 40%;
     height: 100%;
@@ -96,12 +102,7 @@ defineProps({
     align-items: center;
     position: relative;
     overflow: hidden;
-}
-
-.project-wrapper .description {
-    font-size: 16px;
-    line-height: 1.2em;
-    padding-right: 2em;
+    background-color: rgb(30 46 83 / 50%);
 }
 
 .project-wrapper .image img {

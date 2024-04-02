@@ -18,6 +18,7 @@ function updateActiveSection() {
     let activeSectionId = null;
 
 
+
     sections.forEach((section) => {
         const topDistance = getTopDistance(section);
 
@@ -60,5 +61,13 @@ onMounted(() => {
     width: 55%;
     padding: 6vh 0;
     scroll-padding-top: 6rem;
+}
+
+@media screen and (max-width: 1200px) {
+    #content {
+        width: 90%;
+        max-width: 1000px;
+        margin: auto;
+    }
 }
 </style>

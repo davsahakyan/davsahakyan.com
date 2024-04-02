@@ -53,7 +53,24 @@ function showSection(sectionId) {
   document.querySelector(`#${sectionId}`)?.scrollIntoView({ behavior: 'smooth' });
 }
 
+let headerMenu = null;
+
+function showHeaderOnScroll() {
+  if (!headerMenu) return;
+
+  if (window.scrollY > 200) {
+    headerMenu.classList.add('showMenu');
+  } else {
+    headerMenu.classList.remove('showMenu');
+  }
+}
+
+window.addEventListener('scroll', showHeaderOnScroll);
+window.addEventListener('resize', showHeaderOnScroll);
+
 onMounted(() => {
+  headerMenu = document.querySelector('nav#menu');
+
   window.addEventListener('updateActiveNavEvent', (e) => {
     list.value.forEach((li) => {
       li.active = (e.detail.activeSectionId == li.section);
@@ -170,5 +187,71 @@ ul#menu_list li.active a {
 .social a img {
   width: 100%;
   height: 100%;
+}
+
+@media screen and (max-width: 1200px) {
+  #socials {
+    margin-top: 1em;
+  }
+
+  #menu {
+    width: 100%;
+    height: 80px;
+    top: -80px;
+    opacity: 0;
+    left: 0;
+
+    position: fixed;
+    transition: .4s ease;
+
+  }
+
+  #menu.showMenu {
+    opacity: 1;
+    top: 0;
+  }
+
+  ul#menu_list {
+    width: 100%;
+    height: 100%;
+    padding-top: 0;
+    padding-left: 2em;
+
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    background: rgb(12, 31, 73);
+    background: -moz-linear-gradient(180deg, rgba(12, 31, 73, 0.8) 50%, rgba(0, 0, 0, 0) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(12, 31, 73, 0.8) 50%, rgba(0, 0, 0, 0) 100%);
+    background: linear-gradient(180deg, rgba(12, 31, 73, 0.8) 50%, rgba(0, 0, 0, 0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0c1f49", endColorstr="#000000", GradientType=1);
+  }
+
+  ul#menu_list li {
+    position: absolute;
+  }
+
+  ul#menu_list li {
+    opacity: 0;
+  }
+
+  ul#menu_list li a {
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    transition: .3s ease;
+    opacity: 1;
+  }
+
+  ul#menu_list li.active {
+    opacity: 1;
+  }
+
+  ul#menu_list li.active a {
+    font-size: 28px;
+    color: var(--d-white);
+    transition: .4 s ease;
+  }
 }
 </style>
