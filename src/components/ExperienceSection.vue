@@ -6,15 +6,16 @@ import ExperienceSingle from './ExperienceSingle.vue';
 
 <template>
     <section id="experience">
-        <ExperienceSingle :skills-used="['WordPress', 'Javascript', 'HTML', 'CSS', 'Figma']">
+        <ExperienceSingle :skills-used="['Nuxt.js', 'Vue.js', 'JavaScript', 'CSS', 'WordPress']">
             <template v-slot:date>
-                September 2023 - Present
+                March 2024 — Present
             </template>
             <template v-slot:position>
-                <span>Developer</span> • Global to Local
+                <span>Front-End Developer</span> • SayNine
             </template>
             <template v-slot:description>
-                Developed and am still maintaining websites representing the organization and projects that it takes on worldwide.
+                I am responsible for developing and maintaining front-end of tools for in-house usage, as well as
+                developing and maintaining our website.
             </template>
 
         </ExperienceSingle>
@@ -27,7 +28,8 @@ import ExperienceSingle from './ExperienceSingle.vue';
                 Head of Technical Department • Media Systems
             </template>
             <template v-slot:description>
-                With the team, we have built a middleware for displaying advertisements on major local websites using Javascript.
+                With the team, we have built a program for displaying advertisements on major local websites using
+                Javascript.
             </template>
 
         </ExperienceSingle>
@@ -40,7 +42,8 @@ import ExperienceSingle from './ExperienceSingle.vue';
                 <span>Technical Specialist</span> • Media Systems
             </template>
             <template v-slot:description>
-                Built 800+ animated advertisement banners, developed CMS-powered websites , and crafted internally used tools to maximize working efficiency.
+                Built 800+ animated advertisement banners, developed CMS-powered websites , and crafted internally used
+                tools to maximize working efficiency.
             </template>
 
         </ExperienceSingle>
@@ -48,16 +51,16 @@ import ExperienceSingle from './ExperienceSingle.vue';
 </template>
 
 <style scoped>
-    section#experience {
-        margin-top: 1em;
-        scroll-margin-top: 6vh;
-    }
+section#experience {
+    margin-top: 1em;
+    scroll-margin-top: 6vh;
+}
 
-    section#experience:hover .experience-wrapper {
-        opacity: 0.5;
-    }
+section#experience:hover .experience-wrapper {
+    opacity: 0.5;
+}
 
-    section#experience:hover .experience-wrapper:hover {
-        opacity: 1;
-    }
+section#experience:hover .experience-wrapper:hover {
+    opacity: 1;
+}
 </style>
