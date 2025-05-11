@@ -189,6 +189,34 @@ span.field-description {
     bottom: 0;
     position: relative;
     margin-left: 0.2em;
+}
 
+@media screen and (max-width: 768px) {
+    .project-popup {
+        width: 100vw;
+        height: 100vh;
+        left: 0;
+        top: 0;
+        padding: 90px 1em 1em;
+    }
+
+    .project-popup .popup-info {
+        flex-direction: column;
+    }
+
+    .project-popup .popup-image {
+        width: 100%;
+        max-width: none;
+    }
+
+    .project-popup .popup-image img {
+        width: 100%;
+        height: auto;
+    }
+
+    .project-popup .popup-details {
+        margin-left: 0;
+        margin-top: 1em;
+    }
 }
 </style>

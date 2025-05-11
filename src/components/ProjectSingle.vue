@@ -109,4 +109,26 @@ defineProps({
     height: 100%;
 }
 
+@media screen and (max-width: 768px) {
+    .project-wrapper {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .project-wrapper .content {
+        width: 100%;
+        padding: 1em;
+        row-gap: 12px;
+    }
+
+    .project-wrapper .image {
+        width: 100%;
+    }
+
+    .project-wrapper .image img {
+        width: 100%;
+        height: auto;
+    }
+}
+
 </style>

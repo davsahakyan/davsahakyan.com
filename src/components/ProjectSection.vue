@@ -23,7 +23,7 @@ import ma_ma from '../assets/ma_ma.jpg';
             </template>
         </ProjectSingle>
 
-        <ProjectSingle :image-url='edujustice' image-alt='Edujusticeforum Website' button-color="7, 39, 155" website-url="https://edujusticeforum.am">
+        <ProjectSingle :image-url='edujustice' image-alt='Edujusticeforum Website' button-color="25, 115, 251" website-url="https://edujusticeforum.am">
             <template v-slot:name>
                 Edujusticeforum
             </template>

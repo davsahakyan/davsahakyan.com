@@ -90,4 +90,18 @@ defineProps({
     line-height: 16px;
     border-radius: 5em;
 }
+
+@media screen and (max-width: 768px) {
+    .experience-wrapper {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .experience-wrapper .date {
+        grid-column: span 4/span 4;
+    }
+
+    .experience-wrapper .content {
+        grid-column: span 4/span 4;
+    }
+}
 </style>
